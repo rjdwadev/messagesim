@@ -24,7 +24,7 @@ function App() {
   async function fetchMessages() {
     const apiData = await API.graphql({ query: listMessages });
     const authdata = await Auth.currentUserInfo();
-    setUserName(authdata.data);
+    //setUserName(authdata.data);
 
     setMessages(apiData.data.listMessages.items);
   }
